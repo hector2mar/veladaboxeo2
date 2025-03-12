@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/guante_favicon.png" type="image/png">
+    <title>La Velada de Boxeo</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            background-image: url('img/box12.jpg'); /* Añade la ruta de tu imagen de fondo */
+            background-size: cover; /* Cubre toda la pantalla */
+            background-position: center; /* Centra la imagen */
+            background-attachment: fixed; /* Fija la imagen para que no se desplace con el scroll */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
+        }
+
+        header {
+            background-color: rgba(51, 51, 51, 0.8); /* Fondo semi-transparente */
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(68, 68, 68, 0.8); /* Fondo semi-transparente */
+            padding: 10px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: rgba(85, 85, 85, 0.8); /* Fondo semi-transparente al hacer hover */
+        }
+
+        .content {
+            display: none;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .content:target {
+            display: block;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: rgba(51, 51, 51, 0.8); /* Fondo semi-transparente */
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: rgba(68, 68, 68, 0.8); /* Fondo semi-transparente */
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(249, 249, 249, 0.9); /* Fondo semi-transparente */
+        }
+
+        tr:hover {
+            background-color: rgba(241, 241, 241, 0.9); /* Fondo semi-transparente al hacer hover */
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        form fieldset {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+        }
+
+        form label {
+            font-weight: bold;
+        }
+
+        form input[type="text"],
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        form input[type="file"] {
+            margin: 10px 0;
+        }
+
+        form button {
+            background-color: rgba(68, 68, 68, 0.8); /* Fondo semi-transparente */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: rgba(85, 85, 85, 0.8); /* Fondo semi-transparente al hacer hover */
+        }
+
+        .map-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .rss-icon {
+            display: inline-block;
+            margin: 20px 0;
+        }
+
+        .rss-icon img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .escenario-img {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .escenario-img img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>La Velada de Boxeo</h1>
+    </header>
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#peleadores">Peleadores</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#otros">Otros</a>
+    </nav>
+
+    <div id="inicio" class="content">
+        <h2>¿Qué vas a ver?</h2>
+        <p>Mi idea consiste en realizar una página sobre una velada de boxeo que contenga combates tanto de peleadores profesionales como amateur. <br> <br>
+            De estos peleadores sería preciso conocer su edad, altura, peso, alcance y nacionalidad. También se quiere indicar si el pelador es profesional cuál es su ranking dentro de su categoría y cuál es su récord profesional, mientras que si es amateur se pretende saber cuál es su récord amateur. Obviamente no podemos olvidarnos del código del peleador. Los peleadores están entrenados por su respectivo entrenador, del cual queremos saber su nombre, indicar su código identificativo y saber además el gimnasio donde el peleador es entrenado por el entrenador. Además, los peleadores tienen la opción de apadrinar a otro peleador, pero tan sólo a uno. 
+            <br> <br> 
+            En cuanto al combate, es importante conocer el horario de este para saber el orden en el que los combates serán realizados, así como indicar en que esquina estará situado cada peleador del combate. El resultado de este combate lo darán los jurados en caso de que sea necesario indicarlo, ya que puede ocurrir un KO o una lesión que puede hacer terminar el combate antes de llegar a los puntos. De estos jurados es preciso conocer su nombre y su experiencia, así como indicarles un código identificativo.
+            Los combates están dirigidos por los árbitros, que son expertos profesionales de los cuales se debe indicar la experiencia y el nombre, acompañados de su código que identifique a cada uno de los árbitros.
+            
+            <br> <br>
+            Todos los combates ya mencionados ocurren en la Velada. De este Velada es preciso conocer la fecha y el lugar. En esta velada no sólo ocurren los combates, sino que, en los descansos de estos combates, se llevarán acabo diferentes actuaciones tanto musicales como de otro tipo. De las actuaciones guardaremos información sobre el tipo de actuación que es, como de su respectivo horario.
+            La Velada está patrocinada por una serie de patrocinadores específicos, que patrocinan a su vez a los peleadores. De estos patrocinadores deberemos conocer qué tipo de patrocinio ofrecen, es decir, a que se dedica la empresa patrocinadora, así como el nombre de esta. También se le asignará un código para identificar a cada una.
+            
+            <br> <br>
+            Por último, es importante identificar a los clientes, el público en este caso. El público puede comprar una o varias entradas, que son las que les darán acceso a la Velada. De la persona del público que ha comprado la entrada queremos saber su nombre, su teléfono y su correo por si ocurre alguna incidencia, y su edad. Mientras que la información guardada sobre la entrada    
+            será, el tipo de entrada (entrada común, entrada VIP, etc.), el precio de la entrada y el asiento al que corresponde.
+        </p>
+
+        <div class="map-container">
+            <img src="./img/espana.jpg" alt="Mapa" usemap="#zonas">
+            <map name="zonas">
+                <area shape="rect" alt="Mapa" coords="310,290,390,340" href="https://boxeociudadreal.es/" title="Gimnasio Ciudad Real">
+            </map>
+        </div>
+
+        <div class="rss-icon">
+            <a href="rss/ejemplorss.xml" title="Noticias RSS">
+                <img src="img/rss.png" alt="rss">
+            </a>
+        </div>
+    </div>
+
+    <div id="peleadores" class="content">
+        <h2>Peleadores</h2>
+        <h2>Tabla Peleadores</h2>
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Nacionalidad</th>
+                <th>Altura</th> 
+                <th>Alcance</th> 
+                <th>Peso</th>
+            </tr>
+            <tr>
+                <td>Juan</td>
+                <td>30</td>
+                <td>Española</td>
+                <td colspan="2">1,90</td> 
+                <td>102kg</td>
+            </tr>
+            <tr>
+                <td>Carlos</td>
+                <td>35</td>
+                <td>Argentina</td>
+                <td>1,75</td>
+                <td>1,80</td>
+                <td>77kg</td>
+            </tr>
+            <tr>
+                <td>Ana</td>
+                <td>25</td>
+                <td>Mexicana</td>
+                <td rowspan="2">1,65</td> 
+                <td rowspan="2">1,62</td> 
+                <td>62kg</td> 
+            </tr>
+            <tr>
+                <td>Maria</td>
+                <td>28</td>
+                <td>Colombiana</td>
+                <td>65kg</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="contacto" class="content">
+        <h2>Contacto</h2>
+        <p>¿Tienes preguntas o deseas más información? Contáctanos.</p>
+
+        <form action="datos_personales" method="post">
+            <fieldset>
+                <legend>Información Personal</legend>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" required>
+                
+                <label for="dni">DNI:</label>
+                <input type="text" id="dni" name="dni" required>
+                
+                <label>Edad:</label>
+                <input type="radio" id="menor" name="edad" value="menor" required> <label for="menor">Menor de edad</label>
+                <input type="radio" id="joven" name="edad" value="joven"> <label for="joven">Joven (18-25)</label>
+                <input type="radio" id="adulto" name="edad" value="adulto"> <label for="adulto">Adulto (+25)</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Descripción del Problema</legend>
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" rows="5" required></textarea>
+                
+                <label for="adjunto">Fichero adjunto:</label>
+                <input type="file" id="adjunto" name="adjunto">
+            </fieldset>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <div id="otros" class="content">
+        <div class="escenario-img">
+            <img src="img/Escenario.webp" alt="escenario">
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 La Velada de Boxeo. Todos los derechos reservados.</p>
+        <p title="validar la página">
+            <a href="https://validator.w3.org/"><img src="./etiqueta/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88"></a>
+          </p>
+    </footer>
+</body>
+</html>
