@@ -565,58 +565,9 @@
     
     
                 }
-    
-    
-    
                 
             }
-            //Botón desabilítalo, se activara cuando este todos los campos correctos
     
-            function botonDisabled() {
-                if (
-                    document.getElementById("errnombre").innerHTML == "OK" &&
-                    document.getElementById("errcorreo").innerHTML == "OK" &&
-                    document.getElementById("errpassword").innerHTML == "OK" &&
-                    document.getElementById("errvia").innerHTML == "OK" &&
-                    document.getElementById("errpostal").innerHTML == "OK" &&
-                    document.getElementById("errdni").innerHTML == "OK" 
-                    
-                ) {
-                    document.getElementById("btnEnviar").disabled = false; //activa el borón enviar
-                } else {
-                    document.getElementById("btnEnviar").disabled = true; //desactiva el borón enviar
-                }
-            }
-    
-            // Nuevas funciones para los botones de radio
-    
-     function verificar_conectividad(){
-        document.getElementById('conectividad').style.display = "block";
-        document.getElementById('resolucion').style.display = "none";
-        var cuanto = document.getElementById("cinteres");
-                if (cuanto.checked) {
-                    cont++;
-                }
-        
-    }
-    
-    function verificar_monitor(){
-        document.getElementById('conectividad').style.display = "none";
-        document.getElementById('resolucion').style.display = "block";
-    }
-    
-    function verificar_teclado(){
-        document.getElementById('conectividad').style.display = "none";
-        document.getElementById('resolucion').style.display = "none";
-    }    
-    
-    
-        </script>
-        <script type="text/javascript">
-            function convertirMinusculas() {
-                var emailInput = document.getElementById('correo');
-                emailInput.value = emailInput.value.toLowerCase();
-            }
         </script>
     
     
@@ -655,7 +606,7 @@
 
 
             <p>
-                <label>Via Publica:</label><br/>
+                <label>Via Pública:</label><br/>
                 <select id="tipoVia" name="tipovia">
                     <option value="cl">Calle</option>
                     <option value="av">Avenida</option>
@@ -665,7 +616,7 @@
                 <span id="errvia"></span>
             </p>
             <p>
-                <label for="cp">Código Postal :</label>
+                <label for="cp">Código Postal:</label>
                 <input type="text" id="cp" name="codigo" value="" maxlength="5" onkeypress="return permitir(event, 'num')" oninput="validarPostal(); botonDisabled();"/>
                 <span id="errpostal"></span>
             </p>
