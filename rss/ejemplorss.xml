@@ -1,23 +1,24 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
+    <channel>
+        <title>La Velada de Boxeo</title>
+        <link>https://hector2mar.github.io/veladaboxeo2/</link>
+        <description>Últimas noticias sobre la Velada de Boxeo</description>
+        <language>es</language>
+        <pubDate>Wed, 12 Mar 2025 10:00:00 GMT</pubDate>
+        <lastBuildDate>Wed, 12 Mar 2025 10:00:00 GMT</lastBuildDate>
 
-<channel>
+        <item>
+            <title>Página de noticias relacionada con peleas</title>
+            <link>https://as.com/noticias/artes-marciales/</link>
+            <description>Entérate de todos los combates</description>
+        </item>
 
-<item>
+        <item>
+            <title>Noticias de boxeo en España</title>
+            <link>https://www.marca.com/boxeo.html</link>
+            <description>Descubre los mejores peleadores españoles</description>
+        </item>
 
-<title>Velada de Boxeo</title>
-<link>https://es.wikipedia.org/wiki/Boxeo</link>
-<description>Boxeo</description>
-
-</item>
-
-
-
-
-</channel>
-
-
-
-
-
+    </channel>
 </rss>
