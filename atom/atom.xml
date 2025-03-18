@@ -10,7 +10,7 @@
   <!-- Entrada 1: Artes Marciales -->
   <entry>
     <title>Artes Marciales Mixtas</title>
-    <link> href=https://as.com/noticias/artes-marciales/</link>
+    <link> https://as.com/noticias/artes-marciales/</link>
     <id>https://as.com/noticias/artes-marciales/</id>
     <updated>2023-10-25T09:00:00Z</updated>
     <summary>Entérate de las mejores noticias sobre MMA en español</summary>
@@ -19,7 +19,7 @@
   <!-- Entrada 2: Nuevo producto disponible -->
   <entry>
     <title>Nuevo producto: Crema hidratante para piel sensible</title>
-    <link> href=https://www.marca.com/boxeo.html/</link>
+    <link> https://www.marca.com/boxeo.html/</link>
     <id>https://www.marca.com/boxeo.html</id>
     <updated>2023-10-24T15:00:00Z</updated>
     <summary>Descubre las mejores noticias de Boxeo.</summary>
