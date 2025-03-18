@@ -574,8 +574,7 @@
                 document.getElementById("errpassword").innerHTML == "OK" &&
                 document.getElementById("errvia").innerHTML == "OK" &&
                 document.getElementById("errpostal").innerHTML == "OK" &&
-                document.getElementById("errdni").innerHTML == "OK" &&
-                document.getElementById("errintereses").innerHTML == "OK"
+                document.getElementById("errdni").innerHTML == "OK" 
             ) {
                 document.getElementById("btnEnviar").disabled = false;
             } else {
@@ -603,12 +602,12 @@ function verificar_teclado(){
 	document.getElementById('conectividad').style.display = "none";
 	document.getElementById('resolucion').style.display = "none";
 }
-
     </script>
     
 
     <h1>Contacto - La Velada</h1>
         <h5>Rellena los siguientes campos:</h5>
+
                 <form id="formulario" action="recibe.php" method="post">
                     <p>
                         <label for="nombre">Nombre:</label>
