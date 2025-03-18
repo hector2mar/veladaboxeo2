@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <!-- Información básica del feed -->
+  <title type="text">La Velada de Boxeo</title>
+  <id>https://hector2mar.github.io/veladaboxeo2/</id>
+  <link href="https://hector2mar.github.io/veladaboxeo2/" rel="self"/>
+  <link href="https://hector2mar.github.io/veladaboxeo2/"/>
+  <updated>2023-10-25T10:00:00Z</updated>
+  
+
+  <!-- Entrada 1: Artes Marciales -->
+  <entry>
+    <title>Artes Marciales Mixtas</title>
+    <id>https://as.com/noticias/artes-marciales/</id>
+
+    <link rel="alternate" type="text/html" href="https://as.com/noticias/artes-marciales/"/>
+    
+    <updated>2023-10-25T09:00:00Z</updated>
+    <summary>Entérate de las mejores noticias sobre MMA en español</summary>
+    <author>
+    <name>Héctor Martínez</name>
+    </author>
+  </entry>
+
+  <!-- Entrada 2: Nuevo producto disponible -->
+  <entry>
+    <title>Nuevo producto: Crema hidratante para piel sensible</title>
+    <id>https://www.marca.com/boxeo.html</id>
+
+    <link rel="alternate" type="text/html" href="https://www.marca.com/boxeo.html/"/>
+    
+    <updated>2023-10-24T15:00:00Z</updated>
+    <summary>Descubre las mejores noticias de Boxeo.</summary>
+    <author>
+    <name>Héctor Martínez</name>
+    </author>
+  </entry>
+
+</feed>

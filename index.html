@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/guante_favicon.png" type="image/png">
     <title>La Velada de Boxeo</title>
+
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -173,6 +174,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1>La Velada de Boxeo</h1>
@@ -446,6 +448,43 @@
             m.value = m.value.toUpperCase();
         }
 
+  //Recomendación
+
+  function comprobar_intereses() {
+            var cont = 0;
+            var cuanto = document.getElementById("cinteres");
+            if (cuanto.checked) {
+                cont++;
+            }
+            var cuanto = document.getElementById("cinteres1");
+            if (cuanto.checked) {
+                cont++;
+            }
+            var cuanto = document.getElementById("cinteres2");
+            if (cuanto.checked) {
+                cont++;
+            }
+            var cuanto = document.getElementById("cinteres3");
+            if (cuanto.checked) {
+                cont++;
+            }
+            var cuanto = document.getElementById("cinteres4");
+            if (cuanto.checked) {
+                cont++;
+            }
+
+            if (cont < 2) {
+                var textspan = document.getElementById("errinteres");
+                textspan.innerHTML = "2 intereses minimo";
+                textspan.style.color = "red";
+                return false;
+            }
+            var textspan = document.getElementById("errinteres");
+            textspan.innerHTML = "OK";
+            textspan.style.color = "green";
+            return true;
+        }
+
   
 
         function limita2(maximoCaracteres) {
@@ -458,6 +497,7 @@
                 return true;
             }
         }
+
 
         // Solo Letras
 
@@ -535,6 +575,7 @@
                 document.getElementById("errvia").innerHTML == "OK" &&
                 document.getElementById("errpostal").innerHTML == "OK" &&
                 document.getElementById("errdni").innerHTML == "OK" &&
+                document.getElementById("errintereses").innerHTML == "OK"
             ) {
                 document.getElementById("btnEnviar").disabled = false;
             } else {
@@ -565,16 +606,9 @@ function verificar_teclado(){
 
     </script>
     
-</head>
-<body>
-    <div class="header">
-        <h1>Contacto - La Velada</h1>
-    </div>
-        
-    <div class="row">
-        <div class="leftcolumn">
-            <div class="card">
-                <h5>Rellena los siguientes campos:</h5>
+
+    <h1>Contacto - La Velada</h1>
+        <h5>Rellena los siguientes campos:</h5>
                 <form id="formulario" action="recibe.php" method="post">
                     <p>
                         <label for="nombre">Nombre:</label>
@@ -661,11 +695,8 @@ function verificar_teclado(){
                         <input type="reset" name="borra" value="Borrar" onclick="window.location.reload()"/>
                     </p>
                 </form>
-    
-    
             </div>
 
-    
 
     <div id="escenario" class="content">
         <div class="escenario-img">
@@ -674,9 +705,10 @@ function verificar_teclado(){
     </div>
 
     <footer>
+
         <p>&copy; 2025 La Velada de Boxeo. Todos los derechos reservados.</p>
 
-        <p title="validar la página">
+        <p title="Validar la página">
             <a href="https://validator.w3.org/"><img src="./etiqueta/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88"></a>
           </p>
 
@@ -688,7 +720,7 @@ function verificar_teclado(){
         </div>
 
         <div class="rss-icon">
-            <a href="atom/atom.xml" title="Noticias Atom">
+            <a href="rss/atom.xml" title="Noticias Atom">
                 <img src="img/atom.webp" alt="atom">
             </a>
 
