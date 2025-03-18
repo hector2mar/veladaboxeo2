@@ -446,43 +446,6 @@
             m.value = m.value.toUpperCase();
         }
 
-        //Recomendación
-
-        function comprobar_intereses() {
-            var cont = 0;
-            var cuanto = document.getElementById("cinteres");
-            if (cuanto.checked) {
-                cont++;
-            }
-            var cuanto = document.getElementById("cinteres1");
-            if (cuanto.checked) {
-                cont++;
-            }
-            var cuanto = document.getElementById("cinteres2");
-            if (cuanto.checked) {
-                cont++;
-            }
-            var cuanto = document.getElementById("cinteres3");
-            if (cuanto.checked) {
-                cont++;
-            }
-            var cuanto = document.getElementById("cinteres4");
-            if (cuanto.checked) {
-                cont++;
-            }
-
-            if (cont < 2) {
-                var textspan = document.getElementById("errinteres");
-                textspan.innerHTML = "2 intereses mínimo";
-                textspan.style.color = "red";
-                return false;
-            }
-            var textspan = document.getElementById("errinteres");
-            textspan.innerHTML = "OK";
-            textspan.style.color = "green";
-            return true;
-        }
-
   
 
         function limita2(maximoCaracteres) {
@@ -558,8 +521,6 @@
                 info.innerHTML = "Máximo " + maximoCaracteres + " caracteres";
             } else {
                 info.innerHTML = "Puedes escribir hasta " + (maximoCaracteres - elemento.value.length) + " caracteres adicionales";
-
-
             }
 
 
@@ -574,7 +535,6 @@
                 document.getElementById("errvia").innerHTML == "OK" &&
                 document.getElementById("errpostal").innerHTML == "OK" &&
                 document.getElementById("errdni").innerHTML == "OK" &&
-                document.getElementById("errinteres").innerHTML == "OK"
             ) {
                 document.getElementById("btnEnviar").disabled = false;
             } else {
@@ -665,16 +625,7 @@ function verificar_teclado(){
                         <label for="dni">DNI:</label>
                         <input type="text" id="dni" name="dni" value="" oninput="mayus(this); validarDni(); botonDisabled(); ponerCeros()" maxlength="9"/><span id="errdni"></span>
                     </p>
-                    <p>
-                        <label for="cinteres">A:</label><br/><br/>
-                        <input type="checkbox" name="interes[]" value="amigos" id="cinteres" onclick="comprobar_intereses(); botonDisabled();"/>Amigos<br/>
-                        <input type="checkbox" name="interes[]" value="anuncios" id="cinteres1" onclick="comprobar_intereses(); botonDisabled();"/>Anuncios<br/>
-                        <input type="checkbox" name="interes[]" value="blog" id="cinteres2" onclick="comprobar_intereses(); botonDisabled();"/>Blog<br/>
-                        <input type="checkbox" name="interes[]" value="rrss" id="cinteres3" onclick="comprobar_intereses(); botonDisabled();"/>Redes sociales<br/>
-                        <input type="checkbox" name="interes[]" value="tv" id="cinteres4" onclick="comprobar_intereses(); botonDisabled();"/>Television<br/>
-                        <br/>
-                        <span id="errinteres"></span>
-                    </p>
+                
                     <p>
                         <label>Tipo de problema:</label> <br/><br/>
                         <input type="radio" name="producto" value="raton" id="raton" onclick="verificar_conectividad(); botonDisabled();"/> Información sobre la velada <br/>
@@ -699,8 +650,7 @@ function verificar_teclado(){
                             <span id="superior"></span> <br/>
                         </div>
 
-                        <br></br>
-    
+                        <br/>
 
                         <label>Observaciones o problemas:</label><br/>
                         <textarea id="observaciones" name="observaciones" cols="50" rows="5" onkeypress="return limita2(100)"></textarea><br/>
