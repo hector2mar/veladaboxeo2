@@ -4,7 +4,7 @@
   <!-- Información básica del feed -->
   <title type="text">La Velada de Boxeo</title>
   <id>https://hector2mar.github.io/veladaboxeo2/</id>
-  <link href="https://hector2mar.github.io/veladaboxeo2/" rel="self"/>
+  <link href="https://hector2mar.github.io/veladaboxeo2/rss/atom.xml" rel="self"/>
   <link href="https://hector2mar.github.io/veladaboxeo2/"/>
   <updated>2023-10-25T10:00:00Z</updated>
   
